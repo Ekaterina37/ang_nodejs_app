@@ -20,3 +20,4 @@ Notes:
 Things that could have potentially been added to the project:
 •	Form input validation.
 •	More tests or test which make more practical sense from the point of view of more experienced developer.
+•	More comments?
