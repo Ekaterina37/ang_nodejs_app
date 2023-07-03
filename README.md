@@ -13,7 +13,7 @@ Requirements provided by Paul:
 •	Save work in GitHub
 
 Notes:
-•	Upon last run everything worked according to requirements. JSON file was used. Type of data is info about employees.
+•	Upon last run everything worked according to requirements. JSON file was used for database. Type of data is info about employees.
 •	Card order persistence implemented with tracking index order value in JSON file.
 •	Aint much but it's honest work :)
 
