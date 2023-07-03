@@ -1,0 +1,60 @@
+
+<!-- navbar -->
+<nav class="navbar navbar-dark bg-primary">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">Awesome employee management system!</span>
+  </div>
+</nav>
+
+<!-- fetched employee list, drag and drop section -->
+<div class="employee-row" cdkDropList (cdkDropListDropped)="drop($event)">
+  <div class="employee-row-details" *ngFor="let employee of employees; let i = index" cdkDrag [cdkDragData]="i">
+    <div class="employee-info" *ngIf="!employee.isEditing">
+      <span><strong>Name:</strong> {{ employee.name }}</span><br>
+      <span><strong>Phone:</strong> {{ employee.phone }}</span><br>
+      <span><strong>Order Index:</strong> {{ employee.orderIndex }}</span>
+    </div>
+    <div class="employee-actions" *ngIf="!employee.isEditing">
+      <div class="employee-row-action">
+        <a href="#" (click)="deleteEmployee(employee.id)">
+          <i class="material-icons red-trash-icon">delete</i>
+        </a>
+        <a href="#" (click)="startEditingEmployee(employee)">
+          <i class="material-icons purple-edit-icon">edit</i>
+        </a>
+      </div>
+    </div>
+    <div *ngIf="employee.isEditing">
+      <div class="form-group">
+        <label for="employeeName">Name of employee</label>
+        <input type="text" name="name" [(ngModel)]="employee.name" />
+      </div>
+      <div class="form-group">
+        <label for="employeePhone">Phone of employee</label>
+        <input type="text" name="phone" [(ngModel)]="employee.phone" />
+      </div>
+      <div class="employee-row-action">
+        <button class="save-button" (click)="saveEmployee(employee)">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- adding new employee section -->
+<div class="employees-add-container">
+  <div class="employees-form">
+    <form #form="ngForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="employeeName">Name of employee</label>
+        <input type="text" name="name" [(ngModel)]="employee.name" />
+      </div>
+      <div class="form-group">
+        <label for="employeePhone">Phone of employee</label>
+        <input type="text" name="phone" [(ngModel)]="employee.phone" />
+      </div>
+      <div class="employees">
+        <button class="save-button" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

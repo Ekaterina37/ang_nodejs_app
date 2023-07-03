@@ -1,0 +1,99 @@
+  /* employee list output/cards section */
+
+.employee-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 2.8125rem;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+  }
+  
+  .employee-row-details {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    outline: 2px solid #aaa;
+    border-radius: 4px;
+  }
+  
+  .employee-info {
+    flex-grow: 1;
+  }
+  
+  .employee-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .employee-row-action {
+    display: flex;
+    gap: 10px;
+  }
+  
+  /* icons for delete/update */
+  
+  .red-trash-icon {
+    color: red;
+  }
+  
+  .purple-edit-icon {
+    color: purple;
+  }
+  
+  /* adding employees section */
+  
+  .employees-add-container {
+    padding: 1rem;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .employees-form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .employees-form form {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .employees-form label {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  .employees-form input[type="text"] {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .employees-form input[type="text"]:focus {
+    outline: none;
+    border-color: #aaa;
+  }
+  
+  .save-button {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .save-button:hover {
+    background-color: #0069d9;
+  }
+  
+  .save-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+  }
