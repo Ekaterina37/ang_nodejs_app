@@ -1,7 +1,7 @@
 # ang_nodejs_app
 Employee management Angular app completed according to the requirements provided.
 
-Requirements provided by Paul:
+Requirements:
 •	Angular 13
 •	Nodejs back-end server (Rest API)
 •	Read in data (json file, or db) using the REST API, Data can be anything, something that interests you; cars, stocks, sports teams, etc.…
